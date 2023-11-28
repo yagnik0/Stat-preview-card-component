@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: hsl(233, 47%, 7%);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.grid-content {
+    max-width: 80rem;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr 1fr;
+    background-color: hsl(244, 38%, 16%);
+    color: hsl(0, 0%, 100%);
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+
+.gradient {
+    width: 100%;
+    height: 100%;
+    background-image:linear-gradient(rgba(170, 92, 219,0.6),
+    rgba(170,92,219,0.6)),
+    url(images/image-header-desktop.jpg);
+    background-size: cover;
+}
+
+.main-content {
+    padding: 3rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.heading-style {
+    font-size: 2.8rem;
+    color: hsl(0, 0%, 100%);
+    margin-bottom: 2rem;
+}
+
+.heading-style span {
+    color: hsl(277, 64%, 61%);
+}
+
+.para-style {
+    font-size: 1.5rem;
+    font-family: 'Lexend Deca', sans-serif;
+    color: hsla(0, 0%, 100%, 0.75);
+    margin-bottom: 5rem;
+}
+
+.grid-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 1.2rem;
+}
+
+.stats {
+    font-size: 1.8rem;
+    font-family: 'Inter', sans-serif;
+    color: hsl(0, 0%, 100%)
+}
+
+.stats-text {
+    font-size: 0.8rem;
+    color: hsla(0, 0%, 100%, 0.6);
+    text-transform: uppercase;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+@media only screen and (max-width:730px){
+   
+
+    .grid-content{
+        max-width: 30rem;
+        max-height: 90rem;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 0.8rem;
+    }
+
+    .grid-stats{
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    .gradient {
+        background-image: linear-gradient(rgba(170, 92, 219, 0.6), rgba(170, 92, 219, 0.6)),
+                          url(images/image-header-mobile.jpg);
+        background-size: cover;
+        height: 30vh;
+        width: 100vw;
+    }
+}
